@@ -10,9 +10,8 @@ export default defineConfig({
   },
   preview: {
     allowedHosts: [
-      'candidatesearch13.onrender.com',  
+      'module-13-challenge-cwqz.onrender.com',  
       'localhost',
-      'module-13-challenge-cwqz.onrender.com',
     ],
   },
 });
