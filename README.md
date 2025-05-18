@@ -1,46 +1,58 @@
-This is my personal portfolio website built to showcase my skills, projects, and experience. It is designed to be visually appealing, responsive, and easy to navigate. The website is structured with multiple sections that users can easily access, such as:
+Candidate Search App
+This app allows users to search and view GitHub user profiles, save favorites, and navigate through candidates using data from the GitHub API.
 
-Hero: A welcoming introduction with a brief description of who I am and what I do.
-About: Information about my background, skills, and interests.
-Experience: A detailed look at my professional experience and key skills.
-Projects: A showcase of projects I've worked on, highlighting my coding abilities and the technologies I use.
-Contact: A section for users to contact me via email or LinkedIn.
+Technologies Used
+React: For building the user interface.
 
+TypeScript: Adds type safety to the codebase.
 
-Technologies Used:
-React: The core framework for building the interactive UI.
-CSS Modules: Used for modular, scoped styles.
-React Router: For routing between different sections of the portfolio.
-Vite: A modern build tool for faster development and deployment.
+Vite: For fast builds and development.
 
+GitHub API: To fetch public GitHub user data.
 
-Features:
-Responsive Design: The portfolio adapts to different screen sizes, ensuring it looks great on both desktop and mobile devices.
-Interactive Navigation: A user-friendly navigation bar, including a hamburger menu for mobile devices.
-Project Showcase: A dynamic section to display projects with detailed descriptions, technologies used, and external links to live demos and code repositories.
-Contact Form: Includes links to my email and LinkedIn for easy communication.
+LocalStorage: Saves user data locally for persistence.
 
+Features
+Random Candidate Fetching: Displays random GitHub user profiles on load.
 
-Setup and Usage:
-Clone this repository to your local machine.
-Run npm install to install the necessary dependencies.
-Start the development server using npm run dev.
-Visit http://localhost:3000 to view the website locally.
+Save Candidates: Save profiles to LocalStorage for future reference.
+
+Navigation: Easily navigate between candidates.
+
+Error Handling: Provides helpful messages if the API fails.
 
 
-Future Enhancements:
-Implementing a contact form where users can directly send me messages.
-Improving accessibility features for a wider audience.
 
-# React + Vite
+# React + TypeScript + Vite
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
 Currently, two official plugins are available:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+* [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md), which uses [Babel](https://babeljs.io/) for Fast Refresh
+* [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc), which uses [SWC](https://swc.rs/) for Fast Refresh
 
 ## Expanding the ESLint configuration
 
-If you are developing a production application, we recommend using TypeScript and enable type-aware lint rules. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+If you're developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+
+* Configure the top-level `parserOptions` property as follows:
+
+```js
+export default {
+  // other rules...
+  parserOptions: {
+    ecmaVersion: 'latest',
+    sourceType: 'module',
+    project: ['./tsconfig.json', './tsconfig.node.json'],
+    tsconfigRootDir: __dirname,
+  },
+}
+```
+
+* Replace `plugin:@typescript-eslint/recommended` with `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`.
+* Optionally, add `plugin:@typescript-eslint/stylistic-type-checked`.
+* Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` and `plugin:react/jsx-runtime` to the `extends` list.
+
+---
+© 2024 edX Boot Camps LLC. Confidential and Proprietary. All Rights Reserved.
